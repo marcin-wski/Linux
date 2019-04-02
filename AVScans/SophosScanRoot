@@ -1,0 +1,1 @@
+/opt/sophos-av/bin/savscan -all -f -p="/home/user/logs/SophosLogs/SophosScanRoot:$(date +\%b-\%d-\%Y).log" -archive -loopback -mime -suspicious --examine-x-bit --show-file-details -bs -mbr -sc -tnef -oe -pua /

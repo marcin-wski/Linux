@@ -1,0 +1,1 @@
+/usr/bin/clamscan -i --detect-pua -r / --log="/home/user/logs/ClamLogs/ClamAVScanRoot:$(date +\%b-\%d-\%Y).log" 2>/dev/null

@@ -1,0 +1,1 @@
+/usr/bin/clamscan -i --detect-pua -r /home/user --log="/home/user/logs/ClamLogs/ClamAVScanMarcin:$(date +\%b-\%d-\%Y).log" 2>/dev/null
