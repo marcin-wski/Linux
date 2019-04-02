@@ -1,2 +1,2 @@
 # Linux
-All my *Nix things in one place
+This single repository is meant to hold all my Linux work, such as scripts for setting up Snort, script for reinstalling my laptop, Ansible and Chef playbooks...
