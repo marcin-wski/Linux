@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/bin/rkhunter -c --sk -l "/home/user/logs/RkHunterLogs/RootkitCheck:$(date +\%b-\%d-\%Y).log"
