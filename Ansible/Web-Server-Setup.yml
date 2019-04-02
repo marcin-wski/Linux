@@ -1,0 +1,68 @@
+# Web Server setup
+---
+- hosts: web-servers
+
+  tasks:
+
+  - name: "Install the EPEL repo rpm"
+    become: yes
+    yum:
+      update_cache: yes
+      name: 'https://dl.fedoraproject.org/pub/epel-release-latest-7.noarch.rpm'
+      state: 'present'
+  
+  - name: "Update system"
+    become: yes
+    yum:
+      update_cache: yes
+      name: '*'
+      state: 'latest'
+
+  - name: "Install httpd"
+    become: yes
+    yum:
+      name: 'httpd.x86_64'
+      state: 'installed'
+      
+  - name: "Install mysql"
+    become: yes
+    yum:
+      name: 'mysql-server'
+      state: 'installed'
+
+  - name: "Install httpd"
+    become: yes
+    yum:
+      name: 'httpd.x86_64'
+      state: 'present'
+
+  - name: "Remove welcome.conf"
+    become: yes
+    file:
+      path: '/etc/httpd/conf.d/welcome.conf'
+      state: absent
+
+  - name: "Add vhost.conf"
+    become: yes
+    copy:
+      src: files/vhost.conf
+      dest: /etc/httpd/conf.d/vhost.conf
+
+  - name: "Add vhost directory"
+    become: yes
+    file:
+      path: '/var/www/demo'
+      state: directory
+
+  - name: "Copy over index.html"
+    become: yes
+    copy:
+      src: files/index.html
+      dest: /var/www/demo/index.html
+
+  - name: "Start httpd"
+    become: yes
+    service:
+      name: 'httpd'
+      enabled: true
+      state: 'restarted'
