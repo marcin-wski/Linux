@@ -42,3 +42,5 @@ allow_duplicates: true
 #need to actually read up on using the roles:
 #https://ansible-docs.readthedocs.io/zh/stable-2.0/rst/playbooks_roles.html
 #apparently by default the roles are stored in /etc/ansible/roles
+#another page for playbook intro
+#https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html
