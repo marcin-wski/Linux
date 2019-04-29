@@ -69,6 +69,30 @@ name: httpd
 state: latest
 when: ansible_os_family == "RedHat"
 
+#Adding user
+- name: Add a user
+  hosts: all
+  tasks:
+    - name: Add User
+      user:
+        name: admin
+        comment: admin
+        uid: 10420
+        group: admin
+        shell: /bin/zsh
+        password: "admin"
+        state: present
+        
+#Remove user
+- name: Remove user
+  hosts: localhost
+  tasks:
+    - name: Remove User
+    user:
+      name: admin
+      state: absent
+      remove: yes
+
 #If you want to run the same command/variable/role
 allow_duplicates: true
 
