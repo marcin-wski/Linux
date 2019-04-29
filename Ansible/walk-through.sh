@@ -38,6 +38,9 @@ when: ansible_os_family == "RedHat"
 #If you want to run the same command/variable/role
 allow_duplicates: true
 
+#Do you not care about errors?
+ignore_errors: True
+
 #https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html
 #need to actually read up on using the roles:
 #https://ansible-docs.readthedocs.io/zh/stable-2.0/rst/playbooks_roles.html
