@@ -1,3 +1,6 @@
+#I am no longer using GNOME Desktop Environment on Fedora and so this script will likely never be updated
+#The new script can be found under "post-install.sh", please look to it for updates
+
 echo "Version 0.1
 ----------------------
 Starting version for laptop reinstallation.
