@@ -1,5 +1,5 @@
-#version 0.1
-#for now it's in testing stages
+#version 0.2
+#testing on Fedora 30 now
 
 sudo -s <<EOF
 
