@@ -1,0 +1,10 @@
+#!/bin/bash
+echo Which job are we killing today?
+read jobname
+ps aux | grep $jobname | tr -s ' ' | cut -d' ' -f2 > killing-machine
+
+while read line; do kill $line; done < killing-machine
+echo "Confirming they're all dead :)"
+sleep 2
+ps aux | grep $jobname
+rm killing-machine
